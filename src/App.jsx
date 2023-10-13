@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat">
+    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-blue-300 bg-cover bg-no-repeat">
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
@@ -38,7 +38,8 @@ function App() {
                 label="From"
                 amount={amount}
                 currencyOptions={options}
-                onCurrencyChange={(currency) => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
+                onAmountChange={(amount) => setAmount(amount)}
                 selectCurrency={from}
               />
             </div>
@@ -57,7 +58,7 @@ function App() {
                 amount={convertedAmount}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
-                selectCurrency={from}
+                selectCurrency={to}
               />
             </div>
             <button
